@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
   return ( 
@@ -6,10 +7,11 @@ const Navbar = () => {
       <div className="container">
         <a className="brand-logo">React Learning</a>
         <ul className="right">
-          <li><a href="/home">Home</a></li>
-          <li><a href="/todo">Todo</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><NavLink to="/todo">Todo</NavLink></li>
+          <li><NavLink to="/about">About</NavLink></li>
+          <li><NavLink to="/contact">Contact</NavLink></li>
+          {/* NavLink dodatje klasu active kad je link aktivna strana sa tim linkom */}
         </ul>
       </div>
     </nav>
