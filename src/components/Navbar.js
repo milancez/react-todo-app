@@ -4,14 +4,14 @@ import { Link, NavLink, withRouter } from 'react-router-dom'
 // withRouter kako bi Navbar komponenta imala prosp, jer samo komponente koje se koriste preko Route imaju svoj props, kako npr. About, Contact i Todos komponenta u App.js
 
 const Navbar = (props) => {
-  setTimeout(() => {
-    props.history.push('/about'); //history.push sluzi za redirekciju stranice
-  }, 2000);
+  // setTimeout(() => {
+  //   props.history.push('/about'); //history.push sluzi za redirekciju stranice
+  // }, 2000);
 
   return ( 
     <nav className="nav-wrapper red darken-3">
       <div className="container">
-        <a className="brand-logo">React Learning</a>
+        <Link to="/" className="brand-logo">React Learning</Link>
         <ul className="right">
           <li><Link to="/">Home</Link></li>
           <li><NavLink to="/todo">Todo</NavLink></li>
