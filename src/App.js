@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Todos from './Todos';
-import Addtodo from './AddTodo';
+//import Addtodo from './AddTodo';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Home from './components/Home';

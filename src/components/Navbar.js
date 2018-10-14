@@ -1,7 +1,13 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, withRouter } from 'react-router-dom'
 
-const Navbar = () => {
+// withRouter kako bi Navbar komponenta imala prosp, jer samo komponente koje se koriste preko Route imaju svoj props, kako npr. About, Contact i Todos komponenta u App.js
+
+const Navbar = (props) => {
+  setTimeout(() => {
+    props.history.push('/about'); //history.push sluzi za redirekciju stranice
+  }, 2000);
+
   return ( 
     <nav className="nav-wrapper red darken-3">
       <div className="container">
@@ -18,4 +24,4 @@ const Navbar = () => {
    );
 }
  
-export default Navbar;
+export default withRouter(Navbar);
