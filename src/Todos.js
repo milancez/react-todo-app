@@ -1,6 +1,7 @@
 import React from 'react';
+import AddTodo from './AddTodo';
 
-const Todos = ({todos, deleteTodo}) => {
+const Todos = ({todos, deleteTodo, addTodo}) => {
 
   const todoList = todos.length ? (
     todos.map(todo => {
@@ -16,8 +17,12 @@ const Todos = ({todos, deleteTodo}) => {
   )
 
   return (
-    <div className="todos collection">
-      {todoList}
+    <div className="container">
+      <h1 className="center blue-text">Todo's</h1>
+      <div className="todos collection">
+        {todoList}
+      </div>
+      <AddTodo addTodo={addTodo} />
     </div>
   )
 }
