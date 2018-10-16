@@ -27,7 +27,7 @@ class Home extends Component {
       posts.map(post => {
         return (
           <div className="post card" key={post.id}>
-            <img src={CustomImg} alt="Custom React image"/>
+            <img src={CustomImg} alt="React"/>
             <div className="card-content">
               <Link to={'/' + post.id}>
                 <span className="card-title red-text">{post.title}</span>
